@@ -1,0 +1,6 @@
+local_data_path: "Data/breast-cancer.csv"
+preprocessed_data_path: "data/preprocessed.csv"
+model_path: "results/model.pkl"
+metrics_path: "results/metrics.json"
+random_state: 42
+test_size: 0.2
