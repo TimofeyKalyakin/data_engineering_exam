@@ -10,7 +10,7 @@ def load_config():
     with open('config/config.yaml') as f:
         return yaml.safe_load(f)
 
-def evaluate(config):
+def evaluate_model(config):
     df = pd.read_csv(config['preprocessed_data_path'])
     X = df.drop('diagnosis', axis=1)
     y = df['diagnosis']
@@ -37,4 +37,4 @@ def evaluate(config):
 
 if __name__ == "__main__":
     config = load_config()
-    evaluate(config)
+    evaluate_model(config)

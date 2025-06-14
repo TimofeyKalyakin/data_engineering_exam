@@ -7,7 +7,7 @@ def load_config():
     with open('config/config.yaml') as f:
         return yaml.safe_load(f)
 
-def save_artifacts(config):
+def save_results(config):
     model_src = config['model_path']
     metrics_src = config['metrics_path']
 
@@ -22,4 +22,4 @@ def save_artifacts(config):
 
 if __name__ == "__main__":
     config = load_config()
-    save_artifacts(config)
+    save_results(config)

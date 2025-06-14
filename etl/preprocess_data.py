@@ -7,7 +7,7 @@ def load_config():
     with open('config/config.yaml') as f:
         return yaml.safe_load(f)
 
-def preprocess(config):
+def preprocess_data(config):
     path = 'data/raw_data.csv'
     out_path = config['preprocessed_data_path']
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
@@ -36,4 +36,4 @@ def preprocess(config):
 
 if __name__ == "__main__":
     config = load_config()
-    preprocess(config)
+    preprocess_data(config)
